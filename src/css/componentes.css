@@ -1,0 +1,94 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+html {
+    font-size: 62.5%; /*  Esto equivale 10px = 1rem */
+}
+body { color: black; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+/* Gloables */
+.contenedor {
+    width: 75%;
+    margin: 0 auto;    
+    font-size: 2.2rem;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+h1,h2,h3 {
+    margin: 0;
+}
+select {
+    margin: 1rem 0;
+}
+select, input {
+    padding: .5rem 0;
+    width: 100%;
+}
+textarea {
+    width: 100%;
+}
+/* Utileria */
+.nota {
+    font-size: 1.6rem;
+}
+/* header */
+header {
+    border: 1px solid black;
+}
+.navegacion {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 1rem;
+}
+/* main  */
+main {
+    margin-top:  1rem;
+}
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.menu-promociones {
+ flex: calc(60% - 1rem);
+ border: 1px solid black;
+}
+/* menu-orden */
+.menu-orden {
+    flex: calc(40% - 1rem);    
+    padding: 0 1rem;
+    border: 1px solid black;
+}
+.orden-principal {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.orden-secundaria {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+.ingredientes {
+    display: flex;
+    justify-content: space-around;
+}
+.ingredientes label {
+    flex: 80%;
+    text-align: left;
+}
+.ingredientes input {
+    flex: 20%;
+    text-align: right;
+}
+.preferencias {
+    margin-bottom: 1rem;
+}
+
+
+

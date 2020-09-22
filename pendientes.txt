@@ -1,0 +1,3 @@
+1-modificar los checkbox
+2- cambiar "Verduras" por "Extras"
+3- Cambiar "cubierta" por "Toping"
