@@ -31,9 +31,42 @@ select, input {
 textarea {
     width: 100%;
 }
+ul {
+    margin: 0;
+    text-align: left;
+}
 /* Utileria */
+.btn {
+    width: 80%;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: transparent;
+    padding: 1rem 0;
+}
 .nota {
     font-size: 1.6rem;
+}
+.simulador-promocion {
+    height: 300px;
+    width: 90%;
+    margin: 1rem auto;    
+    border-bottom: 1px solid black;    
+
+    display: flex;
+    align-items: baseline;
+    flex-direction: column;
+}
+.simulador-promocion:last-of-type{
+    border: none;
+}
+.promocion-contenido {
+    margin-top: 13rem;
+    display: flex;
+    align-items: flex-end;
+}
+.precio {    
+    margin: 0 0 0 1rem;
+    font-size: 4rem;
 }
 /* header */
 header {
@@ -50,29 +83,30 @@ main {
 }
 .menu {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;    
     text-align: center;
 }
 .menu-promociones {
- flex: calc(60% - 1rem);
+ flex-basis: calc(60% - .5rem);
  border: 1px solid black;
 }
 /* menu-orden */
 .menu-orden {
-    flex: calc(40% - 1rem);    
+    flex-basis: calc(40% - .5rem);    
     padding: 0 1rem;
     border: 1px solid black;
 }
 .orden-principal {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;    
+    border-bottom: 1px solid black;
 }
 .orden-secundaria {
     display: flex;
     flex-direction: column;
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid black;
 }
 .ingredientes {
     display: flex;
@@ -87,8 +121,9 @@ main {
     text-align: right;
 }
 .preferencias {
-    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid black;
 }
-
-
-
+.pago .total {
+    text-align: left;
+}

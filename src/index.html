@@ -17,7 +17,42 @@
         <main>
             <div class="menu">
                 <section class="menu-promociones">
-                    <h1 class="titulo">Promociones</h1>
+                    <div class="simulador-promocion">
+                        <h2>Promo 1</h2>      
+                        <div class="promocion-contenido">
+                            <ul>
+                                <li>Rollos hermanos</li>
+                                <li>Te 1Lt</li>
+                                <li>2 Extras</li>
+                                <li>1 Cupon canjeable en prox compra</li>
+                            </ul>                  
+                            <p class="precio">$ 199.99</p>
+                        </div>
+                    </div>
+                    <div class="simulador-promocion">
+                        <h2>Promo 2</h2>    
+                        <div class="promocion-contenido">
+                            <ul>
+                                <li>Rollos hermanos</li>
+                                <li>Te 1Lt</li>
+                                <li>2 Extras</li>
+                                <li>1 Cupon canjeable en prox compra</li>
+                            </ul>                  
+                            <p class="precio">$ 199.99</p>
+                        </div>                    
+                    </div>
+                    <div class="simulador-promocion">
+                        <h2>Promo 3</h2>  
+                        <div class="promocion-contenido">
+                            <ul>
+                                <li>Rollos hermanos</li>
+                                <li>Te 1Lt</li>
+                                <li>2 Extras</li>
+                                <li>1 Cupon canjeable en prox compra</li>
+                            </ul>                  
+                            <p class="precio">$ 199.99</p>
+                        </div>                      
+                    </div>
                 </section>
 
                 <section class="menu-orden">    
@@ -28,11 +63,11 @@
                             <option value="">Selecciona un Sushi</option>
                         </select>
                         <Select class="campos">
-                            <option value="">Selecciona cubierta</option>
+                            <option value="">Seleccionar Topping</option>
                         </Select>                        
                     </div>
                     <div class="orden-secundaria">
-                        <h2>Verduras</h2>
+                        <h2>Extras</h2>
                         <div class="ingredientes">
                             <label for="zanahora">Zanahora</label>
                             <input type="checkbox" name="zanahora" id="">
@@ -54,6 +89,21 @@
                             <input type="checkbox" name="cambray" id="">
                         </div>          
                     </div>
+                    <div class="orden-secundaria">
+                        <h2>Aderesos</h2>
+                        <div class="ingredientes">
+                            <label for="soya">Soya</label>
+                            <input type="checkbox" name="soya" id="">
+                        </div>
+                        <div class="ingredientes">
+                            <label for="mayonesa">Mayonesa</label>
+                            <input type="checkbox" name="mayonesa" id="">
+                        </div>
+                        <div class="ingredientes">
+                            <label for="chipotle">Mayo-Chipotle</label>
+                            <input type="checkbox" name="chipotle" id="">
+                        </div>
+                    </div>
                     <div class="preferencias">
                         <h2>Detalle</h2>
                         <p class="nota">Describe si no deseas algun ingrediente</p>
@@ -71,7 +121,10 @@
                         </Select>                        
                     </div>
 
-
+                    <div class="pago">
+                        <p class="total">Total $</p>
+                        <button type="submit" class="btn send-order">Enviar Orden</button>            
+                    </div>
         
                 </section>
             </div>
