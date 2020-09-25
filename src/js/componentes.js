@@ -1,11 +1,17 @@
+import {sushis} from './catalogo';
 import '../css/componentes.css' ; //consumiendo los estilos.
 
 
-export const saludar = ( nombre ) => {
-    console.log('Creando etiqueta h1');
+// referencias 
+const sushi = document.querySelector('#principal');
 
-    const h1= document.createElement('h1');
-    h1.innerText = `Hola ${ nombre }`;
-
-    document.body.append( h1 );
+for(let i=0; i< sushis.length; i++){
+    
+    const opcion = document.createElement('option');
+    opcion.setAttribute('value',`${i}`);  
+    opcion.innerText = `${sushis[i]}`;
+    sushi.append(opcion);  
 }
+
+// opcion.setAttribute('value','1');
+// console.log( opcion );
