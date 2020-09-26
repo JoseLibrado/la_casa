@@ -19,7 +19,7 @@ a{
     color: black;
     margin: 0;    
 }
-h1,h2,h3 {
+p, h1,h2,h3 {
     margin: 0;
 }
 select {
@@ -37,6 +37,16 @@ ul {
     text-align: left;
 }
 /* Utileria */
+
+.b60{
+    flex-basis: calc(60% - .5rem);
+}
+.b40{
+    flex-basis: calc(40% - .5rem);    
+}
+.b100 {
+    flex-basis: 100%;    
+}
 .btn {
     width: 80%;
     border: 1px solid black;
@@ -73,6 +83,14 @@ ul {
 .hidden {
     display: none;
 }
+.alert {
+    color: rgb(230, 90, 90);
+    font-weight: bold;
+}
+.success {
+    color: rgb(123, 206, 123);
+    font-weight: bold;
+}
 /* header */
 header {
     border: 1px solid black;
@@ -101,6 +119,11 @@ header {
     padding: 1.3rem 0;
     border-radius: .5rem;
 }
+.informacion {
+    margin: 1rem 0;
+    width: 100%;
+    text-align: center;
+}
 main {
     margin: 1rem 0;
 }
@@ -110,12 +133,10 @@ main {
     text-align: center;
 }
 .menu-promociones {
- flex-basis: calc(60% - .5rem);
  border: 1px solid black;
 }
 /* menu-orden */
-.menu-orden {
-    flex-basis: calc(40% - .5rem);    
+.menu-orden {    
     padding: 0 1rem;
     border: 1px solid black;
 }

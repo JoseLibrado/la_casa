@@ -1,18 +1,20 @@
-import {sushis,lista_registrados, imprimirCupones, crearRegistro} from './catalogo';
+import {sushis,lista_registrados, imprimirCupones, crearRegistro, validarCupon} from './catalogo';
 import {Cupon} from '../classes/cupon';
 import '../css/componentes.css' ; //consumiendo los estilos.
 
 
 // referencias 
+const promociones = document.querySelector('.menu-promociones');
+const ordenes = document.querySelector('.menu-orden');
 const sushi = document.querySelector('#principal');
-const btn_cupon = document.querySelector('#cuponera');
+const mensage = document.querySelector('#mensaje');
 const registro_cupon = document.querySelector('.registro-cupones');
-const btn_registrar = document.querySelector('#enviar');
-
 const nombre = document.querySelector('#nombre');
 const cuponRegistrado = document.querySelector('#cupon');
 
-
+const btn_registrar = document.querySelector('#enviar');
+const btn_cupon = document.querySelector('#cuponera');
+const btn_ordenes = document.querySelector('#orden');
 
 for(let i=0; i< sushis.length; i++){
     
@@ -30,15 +32,60 @@ btn_cupon.addEventListener('click', () =>{
         registro_cupon.classList.add('hidden');       
     }    
 });
-btn_registrar.addEventListener('click',() => {
 
-    // console.log(nombre.value);
-    // console.log(cuponRegistrado.value);
-    const cuponNuevo = new Cupon(nombre.value, cuponRegistrado.value);
-    crearRegistro(cuponNuevo);
-    imprimirCupones();
+btn_ordenes.addEventListener('click', () => {
+
+    if( ordenes.classList.contains('hidden') ){
+        ordenes.classList.remove('hidden');  
+        promociones.classList.remove('b100');           
+        promociones.classList.add('b60');    
+    } else {
+        ordenes.classList.add('hidden'); 
+        promociones.classList.remove('b60');
+        promociones.classList.add('b100');      
+    }
 
 });
+
+btn_registrar.addEventListener('click',() => {
+
+    validacionCampos();
+    if(validacionCampos()){       
+        mensage.innerText = 'Completa la información';
+    } else {
+        const cuponNuevo = new Cupon(nombre.value, cuponRegistrado.value);
+        const metodoValidador = validarCupon(cuponRegistrado.value);
+        if(!metodoValidador){
+            crearRegistro(cuponNuevo);
+            mensage.innerText = '';
+            mensage.classList.remove('alert');
+            mensage.classList.add('success');
+            mensage.innerText = 'Cúpon registado con éxito';            
+        } else if(metodoValidador){
+            mensage.innerText = '';
+            mensage.removeAttribute('class');
+            mensage.classList.add('alert');
+            mensage.innerText = 'Tu cúpon ah sido registado anteriormente';
+        }   
+        
+    }
+
+});
+
+const validacionCampos = () => {
+    let validacion = false;
+    if(nombre.value == '' || cuponRegistrado.value == ''){
+        mensage.classList.add('alert');
+        if(nombre.value == ''){
+            nombre.focus();
+        }
+        else if(cuponRegistrado.value = ''){
+            cuponRegistrado.focus();
+        }
+        validacion = true;
+    } 
+    return validacion;
+}
 
 
 

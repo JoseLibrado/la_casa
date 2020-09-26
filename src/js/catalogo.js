@@ -3,8 +3,9 @@ export const sushis = ['Mexicano', 'Estilo Oriental', 'Sierreño'];
 // array para guardar los registros de cupones
 export const lista_registrados = [];
 
-export const crearRegistro  = (cupon) => {
-    lista_registrados.push(cupon);    
+export const crearRegistro  = (cupon) => {    
+    
+    lista_registrados.push(cupon);   
 }
 
 export function imprimirCupones(){
@@ -13,4 +14,15 @@ export function imprimirCupones(){
         // console.log(item.cupon);
     }    
 }
+ export function validarCupon(id){
+    let validacion = false;
+    for(const idCupon of lista_registrados){
+        if(idCupon.cupon == id) {
+            validacion = !false;
+        }
+    }
+    
+    return validacion;    
+
+ }
 
