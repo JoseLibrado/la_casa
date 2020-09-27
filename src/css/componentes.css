@@ -1,3 +1,9 @@
+:root {
+    --lineas: rgba(201, 201, 201, 0.719);
+    --letras: rgb(23, 23, 155);
+    --fondo: rgba(255, 255, 255, 0.823);
+}
+
 html {
     box-sizing: border-box;
   }
@@ -7,7 +13,9 @@ html {
 html {
     font-size: 62.5%; /*  Esto equivale 10px = 1rem */
 }
-body { color: black; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+body {
+    color: var(--letras); 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
 /* Gloables */
 .contenedor {
     width: 75%;
@@ -18,8 +26,9 @@ body { color: black; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Aria
 }
 a{
     text-decoration: none;
-    color: black;
-    margin: 0;    
+    margin: 0;        
+    color: var(--letras); 
+    
 }
 p, h1,h2,h3 {
     margin: 0;
@@ -28,11 +37,13 @@ select {
     margin: 1rem 0;
 }
 select, input{
+    border: 1px solid var(--lineas);
     padding: .5rem 0;
     width: 100%;
 }
 textarea {
     width: 100%;
+    border: 1px solid var(--lineas);
 }
 ul {
     margin: 0;
@@ -53,11 +64,11 @@ ul {
 }
 .btn {
     width: 80%;
-    border: 1px solid black;
     border-radius: 5px;
-    background-color: transparent;
+    background-color: var(--lineas);
     padding: 1rem 0;
     text-align: center;
+    color: grey;
 }
 .nota {
     font-size: 1.6rem;
@@ -66,7 +77,7 @@ ul {
     height: 300px;
     width: 90%;
     margin: 1rem auto;    
-    border-bottom: 1px solid black;    
+    border-bottom: 1px solid var(--lineas);
 
     display: flex;
     align-items: baseline;
@@ -98,7 +109,7 @@ ul {
 }
 /* header */
 header {
-    border: 1px solid black;
+    border: 1px solid var(--lineas);
     transition: all .3s ease-out;
     
 }
@@ -110,7 +121,7 @@ header {
 /* main  */
 
 .registro-cupones {        
-    border: 1px solid black;
+    border: 1px solid var(--lineas);
     transition: all .3s ease;
     margin-bottom: 1rem;        
     transition: all .3s ease-out;
@@ -145,26 +156,26 @@ main {
     text-align: center;
 }
 .menu-promociones {
- border: 1px solid black; 
+ border: 1px solid var(--lineas); 
  transition: all .3s ease-out;
 }
 /* menu-orden */
 .menu-orden {    
     padding: 0 1rem;
-    border: 1px solid black;    
+    border: 1px solid var(--lineas);    
     /* transition: all .3s ease-out; */
 }
 .orden-principal {
     display: flex;
     flex-direction: column;
     padding-bottom: 1rem;    
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--lineas);
 }
 .orden-secundaria {
     display: flex;
     flex-direction: column;
     padding-bottom: 1rem;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--lineas);
 }
 .ingredientes {
     display: flex;
@@ -180,7 +191,7 @@ main {
 }
 .preferencias {
     padding-bottom: 1rem;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid var(--lineas);
 }
 .pago .total {
     text-align: left;
