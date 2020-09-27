@@ -13,6 +13,8 @@ body { color: black; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Aria
     width: 75%;
     margin: 0 auto;    
     font-size: 2.2rem;
+    transition: all .3s ease-out;
+    
 }
 a{
     text-decoration: none;
@@ -37,7 +39,9 @@ ul {
     text-align: left;
 }
 /* Utileria */
-
+.b00 {
+    height: 0%;
+}
 .b60{
     flex-basis: calc(60% - .5rem);
 }
@@ -81,19 +85,22 @@ ul {
     font-size: 4rem;
 }
 .hidden {
-    display: none;
+    display: none;    
 }
 .alert {
     color: rgb(230, 90, 90);
-    font-weight: bold;
+    font-size: 1.6rem;
 }
 .success {
     color: rgb(123, 206, 123);
-    font-weight: bold;
+    font-size: 1.6rem;
+    
 }
 /* header */
 header {
     border: 1px solid black;
+    transition: all .3s ease-out;
+    
 }
 .navegacion {
     display: flex;
@@ -101,10 +108,12 @@ header {
     padding: 2rem 1rem;
 }
 /* main  */
-.registro-cupones {
+
+.registro-cupones {        
     border: 1px solid black;
-    margin-bottom: 1rem;
-    /* transition: cubic-bezier(0.445, 0.05, 0.55, 0.95); */
+    transition: all .3s ease;
+    margin-bottom: 1rem;        
+    transition: all .3s ease-out;
 }
 .form-cupon{
     width: 70%;
@@ -126,6 +135,9 @@ header {
 }
 main {
     margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    transition: all .3s ease; 
 }
 .menu {
     display: flex;
@@ -133,12 +145,14 @@ main {
     text-align: center;
 }
 .menu-promociones {
- border: 1px solid black;
+ border: 1px solid black; 
+ transition: all .3s ease-out;
 }
 /* menu-orden */
 .menu-orden {    
     padding: 0 1rem;
-    border: 1px solid black;
+    border: 1px solid black;    
+    /* transition: all .3s ease-out; */
 }
 .orden-principal {
     display: flex;

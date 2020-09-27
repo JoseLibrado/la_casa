@@ -4,6 +4,7 @@ import '../css/componentes.css' ; //consumiendo los estilos.
 
 
 // referencias 
+const main = document.querySelector('.main');
 const promociones = document.querySelector('.menu-promociones');
 const ordenes = document.querySelector('.menu-orden');
 const sushi = document.querySelector('#principal');
@@ -27,7 +28,7 @@ for(let i=0; i< sushis.length; i++){
 btn_cupon.addEventListener('click', () =>{
     
     if( registro_cupon.classList.contains('hidden') ){
-        registro_cupon.classList.remove('hidden');       
+        registro_cupon.classList.remove('hidden');     
     } else {
         registro_cupon.classList.add('hidden');       
     }    
