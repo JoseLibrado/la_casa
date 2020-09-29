@@ -29,8 +29,10 @@ btn_cupon.addEventListener('click', () =>{
     
     if( registro_cupon.classList.contains('hidden') ){
         registro_cupon.classList.remove('hidden');     
+        btn_cupon.classList.add('selected');
     } else {
-        registro_cupon.classList.add('hidden');       
+        registro_cupon.classList.add('hidden');  
+        btn_cupon.classList.remove('selected');     
     }    
 });
 
@@ -39,11 +41,13 @@ btn_ordenes.addEventListener('click', () => {
     if( ordenes.classList.contains('hidden') ){
         ordenes.classList.remove('hidden');  
         promociones.classList.remove('b100');           
-        promociones.classList.add('b60');    
+        promociones.classList.add('b60');   
+        btn_ordenes.classList.add('selected'); 
     } else {
         ordenes.classList.add('hidden'); 
         promociones.classList.remove('b60');
-        promociones.classList.add('b100');      
+        promociones.classList.add('b100');     
+        btn_ordenes.classList.remove('selected');  
     }
 
 });
