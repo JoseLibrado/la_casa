@@ -1,4 +1,4 @@
-import {sushis,lista_registrados, imprimirCupones, crearRegistro, validarCupon} from './catalogo';
+import {sushis,lista_registrados, imprimirCupones, crearRegistro, validarCupon, buscarPrecio, precios} from './catalogo';
 import {Cupon} from '../classes/cupon';
 import '../css/componentes.css' ; //consumiendo los estilos.
 
@@ -8,6 +8,7 @@ const main = document.querySelector('.main');
 const promociones = document.querySelector('.menu-promociones');
 const ordenes = document.querySelector('.menu-orden');
 const sushi = document.querySelector('#principal');
+const valor = document.querySelector('.precio');
 const mensage = document.querySelector('#mensaje');
 const registro_cupon = document.querySelector('.registro-cupones');
 const nombre = document.querySelector('#nombre');
@@ -17,13 +18,26 @@ const btn_registrar = document.querySelector('#enviar');
 const btn_cupon = document.querySelector('#cuponera');
 const btn_ordenes = document.querySelector('#orden');
 
+const lista = [];
 for(let i=0; i< sushis.length; i++){
     
     const opcion = document.createElement('option');
     opcion.setAttribute('value',`${i}`);  
     opcion.innerText = `${sushis[i]}`;
-    sushi.append(opcion);  
+    let item = sushi.append(opcion);
+    lista.push(opcion.getAttribute('value'));
+
 }
+// pendiente hacer la logica para implementar la lista de preciosÑ
+console.log(lista);
+console.log(sushi.children[1].value);
+// console.log(sushi.nextElementSibling);
+
+const precio = buscarPrecio(3);
+console.log(precio);
+
+// const opcion = sushi.options[sushi.selectedIndex].value;
+// console.log(opcion);
 
 btn_cupon.addEventListener('click', () =>{
     
@@ -72,7 +86,22 @@ btn_registrar.addEventListener('click',() => {
     }
 
 });
+sushi.addEventListener('click', ()=> {
+    let platillo = getOpcion(sushi);
+    // console.log(platillo);
+    const precio = buscarPrecio(platillo);
 
+    if(precio){
+        console.log(precio);
+        valor.innerText = `$ ${precio}.00`;
+    }
+    else if(precio == null || precio == undefined ){
+        valor.innerText = '';
+    }
+});
+
+
+// funciones ===========
 const validacionCampos = () => {
     let validacion = false;
     if(nombre.value == '' || cuponRegistrado.value == ''){
@@ -88,11 +117,7 @@ const validacionCampos = () => {
     return validacion;
 }
 
-
-
-
-
-
-
-// opcion.setAttribute('value','1');
-// console.log( opcion );
+const getOpcion = (selector) => {
+    const opcion = selector.options[selector.selectedIndex].value;
+    return opcion;
+}
