@@ -1,4 +1,5 @@
-import {sushis,lista_registrados, imprimirCupones, crearRegistro, validarCupon, buscarPrecio, precios} from './catalogo';
+import {sushis,lista_registrados, imprimirCupones, crearRegistro, validarCupon, buscarPrecio, precios} from './metodos';
+
 import {Cupon} from '../classes/cupon';
 import '../css/componentes.css' ; //consumiendo los estilos.
 
