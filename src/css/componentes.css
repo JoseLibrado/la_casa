@@ -1,6 +1,6 @@
 :root {
-    --lineas: rgba(201, 201, 201, 0.719);
-    --letras: rgb(23, 135, 155);
+    --lineas: orange; /* rgba(201, 201, 201, 0.719); */
+    --letras: orange;
     --fondo: rgba(247, 247, 247, 0.973);
 }
 
@@ -14,7 +14,8 @@ html {
     font-size: 62.5%; /*  Esto equivale 10px = 1rem */
 }
 body {
-    background-color: var(--fondo);
+    background-color: black;
+    /* background-color: var(--fondo); */
     color: var(--letras); 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
 /* Gloables */
@@ -31,20 +32,29 @@ a{
     color: var(--letras); 
     
 }
+img {
+    width: 100%;
+}
 p, h1,h2,h3 {
     margin: 0;
 }
 select {
     margin: 1rem 0;
+    border-radius: 5px;
 }
 select, input{
     border: 1px solid var(--lineas);
+    background-color: transparent;
     padding: .5rem 0;
     width: 100%;
+    color: orangered;
 }
 textarea {
+    background-color: transparent;    
     width: 100%;
-    border: 1px solid var(--lineas);
+    border: 1px solid var(--lineas);   
+    border-radius: 5px;
+    color: orangered;
 }
 ul {
     margin: 0;
@@ -66,10 +76,12 @@ ul {
 .btn {
     width: 80%;
     border-radius: 5px;
-    background-color: var(--lineas);
+    border: none;
+    background-color: orangered;
     padding: 1rem 0;
     text-align: center;
-    color: grey;
+    color: white;
+    font-size: 1.8rem;
 }
 .nota {
     font-size: 1.6rem;
@@ -87,6 +99,29 @@ ul {
 .simulador-promocion:last-of-type{
     border: none;
 }
+.p1 {    
+    background-image: url(../assets/sushi1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    /* z-index: 1; */
+}
+.p2 {    
+    background-image: url(../assets/sushi2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.p3 {    
+    background-image: url(../assets/sushi3.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    
+}
 .promocion-contenido {
     margin-top: 13rem;
     display: flex;
@@ -101,6 +136,7 @@ ul {
 }
 .selected {
     border-bottom: 1px solid var(--letras);
+    color: white;
 }
 .alert {
     color: rgb(230, 90, 90);
@@ -113,9 +149,10 @@ ul {
 }
 /* header */
 header {
-    background-color: white;
-    border-radius: 5px;
-    border: 1px solid var(--lineas);
+    background-color: transparent;
+    box-shadow: 0 0 5px 0 rgb(39, 39, 39);
+    /* border-radius: 5px; */
+    /* border: 1px solid var(--lineas); */
     transition: all .3s ease-out;
     
 }
@@ -130,9 +167,11 @@ header {
 /* main  */
 
 .registro-cupones {
-    background-color: white;
-    border-radius: 5px;
-    border: 1px solid var(--lineas);
+    /* background-color: white;
+    border-radius: 5px; */
+    /* border: 1px solid var(--lineas); */
+    background-color: transparent;
+    box-shadow: 0 0 5px 0 rgb(39, 39, 39);
     transition: all .3s ease;
     margin-bottom: 1rem;        
     transition: all .3s ease-out;
@@ -146,9 +185,11 @@ header {
     justify-content: space-around;
 }
 .form-cupon input {
+    background: transparent;
     margin-right: .5rem;
-    padding: 1.3rem 0;
+    padding: 1.3rem .5rem;
     border-radius: .5rem;
+    border: 1px solid var(--lineas);
 }
 .informacion {
     margin: 1rem 0;
@@ -162,35 +203,37 @@ main {
     transition: all .3s ease; 
 }
 .menu {
-    background-color: white;
+    /* background-color: white; */
     display: flex;
     justify-content: space-between;    
     text-align: center;
 }
 .menu-promociones {
-    border-radius: 5px;
-    border: 1px solid var(--lineas); 
+    background-color: transparent;
+    box-shadow: 0 0 5px 0  rgb(39, 39, 39);
+    /* border-radius: 5px;
+    border: 1px solid var(--lineas);  */
     transition: all .3s ease-out;
 }
 /* menu-orden */
 .menu-orden {    
-    padding: 0 1rem;
-    border-radius: 5px;
-    border: 1px solid var(--lineas);    
+    background-color: transparent;
+    box-shadow: 0 0 5px 0  rgb(39, 39, 39);    
+    padding: 1rem;    
+    /* padding: 0 1rem;
+    border-radius: 5px; */
+    /* border: 1px solid var(--lineas);     */
     /* transition: all .3s ease-out; */
 }
 .orden-principal {
     display: flex;
     flex-direction: column;
-    padding-bottom: 1rem;    
-    border-radius: 5px;
     border-bottom: 1px solid var(--lineas);
 }
 .orden-secundaria {
     display: flex;
     flex-direction: column;
     padding-bottom: 1rem;
-    border-radius: 5px;
     border-bottom: 1px solid var(--lineas);
 }
 .ingredientes {
@@ -207,7 +250,6 @@ main {
 }
 .preferencias {
     padding-bottom: 1rem;
-    border-radius: 5px;
     border-bottom: 1px solid var(--lineas);
 }
 .pago .total {
