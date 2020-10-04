@@ -33,7 +33,7 @@ a{
     
 }
 img {
-    width: 100%;
+    width: 70%; 
 }
 p, h1,h2,h3 {
     margin: 0;
@@ -100,12 +100,21 @@ ul {
     border: none;
 }
 .p1 {    
-    background-image: url(../assets/sushi1.jpg);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    /* background-image: url(../assets/sushi1.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    position: relative;
+    position: relative; */
     /* z-index: 1; */
+}
+.promocion-imagen {
+    flex-basis: calc(70% - 1rem);
+}
+.promocion-descripcion {
+    flex-basis: calc(30% - 1rem);
 }
 .p2 {    
     background-image: url(../assets/sushi2.jpg);
@@ -123,12 +132,12 @@ ul {
     
 }
 .promocion-contenido {
-    margin-top: 13rem;
+    /* margin-top: 13rem; */
     display: flex;
     align-items: flex-end;
 }
 .precio {    
-    margin: 0 0 0 1rem;
+    /* margin: 0 0 0 1rem; */
     font-size: 4rem;
 }
 .hidden {
