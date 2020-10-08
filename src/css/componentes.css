@@ -99,38 +99,6 @@ ul {
 .simulador-promocion:last-of-type{
     border: none;
 }
-.p1 {    
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    /* background-image: url(../assets/sushi1.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative; */
-    /* z-index: 1; */
-}
-.promocion-imagen {
-    flex-basis: calc(70% - 1rem);
-}
-.promocion-descripcion {
-    flex-basis: calc(30% - 1rem);
-}
-.p2 {    
-    background-image: url(../assets/sushi2.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-}
-.p3 {    
-    background-image: url(../assets/sushi3.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    
-}
 .promocion-contenido {
     /* margin-top: 13rem; */
     display: flex;
