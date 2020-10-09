@@ -41,7 +41,7 @@ console.log(precio);
 // console.log(opcion);
 
 btn_cupon.addEventListener('click', () =>{
-    
+    // prompt('Registrar cúpon');
     if( registro_cupon.classList.contains('hidden') ){
         registro_cupon.classList.remove('hidden');     
     } else {
