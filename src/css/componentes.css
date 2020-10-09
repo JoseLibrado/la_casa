@@ -65,16 +65,16 @@ ul {
     height: 0%;
 }
 .b60{
-    flex-basis: calc(60% - .5rem);
+    flex-basis: calc(70% - .5rem);
 }
 .b40{
-    flex-basis: calc(40% - .5rem);    
+    flex-basis: calc(30% - .5rem);    
 }
 .b100 {
     flex-basis: 100%;    
 }
 .btn {
-    width: 80%;
+    width: 90%;
     border-radius: 5px;
     border: none;
     background-color: orangered;
@@ -87,22 +87,48 @@ ul {
     font-size: 1.6rem;
 }
 .simulador-promocion {
-    height: 300px;
-    width: 90%;
-    margin: 1rem auto;    
+    /* height: 300px; */
+    width: 98%;
+    margin: 0 auto;
+    padding: 1rem 0;    
     border-bottom: 1px solid var(--lineas);
 
     display: flex;
-    align-items: baseline;
-    flex-direction: column;
+    /* align-items: baseline;
+    flex-direction: column; */
 }
 .simulador-promocion:last-of-type{
     border: none;
 }
+.logo-promocion {
+    width: 50%;
+    border-right: 1px solid white;
+}
+.contenido-promocion {
+    width: 50%;
+    margin: 0 auto;
+    vertical-align: center;
+}
 .promocion-contenido {
-    /* margin-top: 13rem; */
+    /* width: 50%;  */
+    /* margin-left: .5rem;  */
+    /* display: flex;
+    align-items: flex-end;  */
+}
+.promocion-descripcion {
+    margin-bottom: 1rem;
+    width: 100%;
     display: flex;
-    align-items: flex-end;
+    justify-content: space-between;
+}
+.promocion-descripcion ul {
+    width: 60%;
+}
+.promocion-descripcion p {
+    font-size: 3rem;
+    margin-top: 5rem;
+    width: 40%;
+    text-align: center;
 }
 .precio {    
     /* margin: 0 0 0 1rem; */
