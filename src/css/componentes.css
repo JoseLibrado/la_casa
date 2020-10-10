@@ -127,6 +127,7 @@ li::before {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-around;
     
 }
@@ -146,7 +147,7 @@ li::before {
 .promocion-descripcion ul {
     margin-left: 1rem;
     width: 100%;
-    font-size: 2rem;
+    font-size: 2.2rem;
     /* width: 60%; */
 }
 .contenido-promocion p {
