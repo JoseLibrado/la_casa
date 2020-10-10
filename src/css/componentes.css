@@ -57,8 +57,19 @@ textarea {
     color: orangered;
 }
 ul {
+    display: inline-block;
+    padding: 0;
     margin: 0;
     text-align: left;
+}
+li {
+    list-style: none;
+}
+li::before {
+    color:  green;
+    content: '*';
+    top: 1rem;
+    /* left: 0; */
 }
 /* Utileria */
 .b00 {
@@ -102,32 +113,46 @@ ul {
 }
 .logo-promocion {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border-right: 1px solid white;
+}
+.logo-promocion img {
+    margin-bottom: 1rem;
 }
 .contenido-promocion {
     width: 50%;
     margin: 0 auto;
-    vertical-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    
 }
 .promocion-contenido {
     /* width: 50%;  */
     /* margin-left: .5rem;  */
-    /* display: flex;
-    align-items: flex-end;  */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
 }
 .promocion-descripcion {
-    margin-bottom: 1rem;
+    margin-top: 1rem;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    /* display: flex;
+    justify-content: space-between; */
 }
 .promocion-descripcion ul {
-    width: 60%;
+    margin-left: 1rem;
+    width: 100%;
+    font-size: 2rem;
+    /* width: 60%; */
 }
-.promocion-descripcion p {
+.contenido-promocion p {
     font-size: 3rem;
-    margin-top: 5rem;
-    width: 40%;
+    margin-top: 1rem;
+    /* width: 40%; */
     text-align: center;
 }
 .precio {    
