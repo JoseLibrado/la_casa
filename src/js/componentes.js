@@ -4,6 +4,7 @@ import '../css/componentes.css' ; //consumiendo los estilos.
 
 
 // referencias 
+const body = document.querySelector('body');
 const main = document.querySelector('.main');
 const promociones = document.querySelector('.menu-promociones');
 const ordenes = document.querySelector('.menu-orden');
@@ -16,14 +17,20 @@ const cuponRegistrado = document.querySelector('#cupon');
 const btn_registrar = document.querySelector('#enviar');
 const btn_cupon = document.querySelector('#cuponera');
 const btn_ordenes = document.querySelector('#orden');
+const btn_modal = document.querySelectorAll('#btn_modal');
 
-for(let i=0; i< sushis.length; i++){
+const divModal = document.createElement('div');
+const img_modal = document.createElement('img');  
+
+
+// for(let i=0; i< sushis.length; i++){
     
-    const opcion = document.createElement('option');
-    opcion.setAttribute('value',`${i}`);  
-    opcion.innerText = `${sushis[i]}`;
-    sushi.append(opcion);  
-}
+//     const opcion = document.createElement('option');
+//     opcion.setAttribute('value',`${i}`);  
+//     opcion.innerText = `${sushis[i]}`;
+//     sushi.append(opcion);  
+// }
+
 
 btn_cupon.addEventListener('click', () =>{
     
@@ -77,6 +84,17 @@ btn_registrar.addEventListener('click',() => {
 
 });
 
+
+divModal.addEventListener('click',e => {
+
+    // console.log(e.target);
+    if(e.target === divModal){
+        divModal.removeChild(img_modal);
+        body.removeChild(divModal);
+    }
+
+});
+
 const validacionCampos = () => {
     let validacion = false;
     if(nombre.value == '' || cuponRegistrado.value == ''){
@@ -92,11 +110,21 @@ const validacionCampos = () => {
     return validacion;
 }
 
+const add_modal = () => {
 
+        btn_modal.forEach(elm => {
+            
+            elm.addEventListener('click', (e) => {
 
+                // console.log(e.target);
+                divModal.classList.add('modal');
+                body.appendChild(divModal);
+                img_modal.classList.add('img-modal');
+                img_modal.src = '../assets/sushi2.jpg';
+                divModal.appendChild(img_modal);
+        });
+        
+    });    
+}
 
-
-
-
-// opcion.setAttribute('value','1');
-// console.log( opcion );
+add_modal();
