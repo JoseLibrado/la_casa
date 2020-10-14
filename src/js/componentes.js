@@ -1,4 +1,5 @@
-import {sushis,lista_registrados, imprimirCupones, crearRegistro, validarCupon, buscarPrecio, precios} from './metodos';
+import {setPlatillos,sushis,lista_registrados, imprimirCupones, crearRegistro, validarCupon, buscarPrecio, precios} from './metodos';
+import {catalogo} from './precios';
 
 import {Cupon} from '../classes/cupon';
 import '../css/componentes.css' ; //consumiendo los estilos.
@@ -19,23 +20,24 @@ const btn_registrar = document.querySelector('#enviar');
 const btn_cupon = document.querySelector('#cuponera');
 const btn_ordenes = document.querySelector('#orden');
 
-const lista = [];
-for(let i=0; i< sushis.length; i++){
+// const lista = [];
+// for(let i=0; i< sushis.length; i++){
     
-    const opcion = document.createElement('option');
-    opcion.setAttribute('value',`${i}`);  
-    opcion.innerText = `${sushis[i]}`;
-    let item = sushi.append(opcion);
-    lista.push(opcion.getAttribute('value'));
+//     const opcion = document.createElement('option');
+//     opcion.setAttribute('value',`${i}`);  
+//     opcion.innerText = `${sushis[i]}`;
+//     let item = sushi.append(opcion);
+//     lista.push(opcion.getAttribute('value'));
 
-}
+// }
+
 // pendiente hacer la logica para implementar la lista de preciosÑ
-console.log(lista);
-console.log(sushi.children[1].value);
+// console.log(lista);
+// console.log(sushi.children[1].value);
 // console.log(sushi.nextElementSibling);
 
-const precio = buscarPrecio(3);
-console.log(precio);
+// const precio = buscarPrecio(3);
+// console.log(precio);
 
 // const opcion = sushi.options[sushi.selectedIndex].value;
 // console.log(opcion);
@@ -88,17 +90,18 @@ btn_registrar.addEventListener('click',() => {
 
 });
 sushi.addEventListener('click', ()=> {
-    let platillo = getOpcion(sushi);
-    // console.log(platillo);
-    const precio = buscarPrecio(platillo);
+    // setPlatillos(catalogo,sushi);
+    // let platillo = getOpcion(sushi);
+    // // console.log(platillo);
+    // const precio = buscarPrecio(platillo);
 
-    if(precio){
-        console.log(precio);
-        valor.innerText = `$ ${precio}.00`;
-    }
-    else if(precio == null || precio == undefined ){
-        valor.innerText = '';
-    }
+    // if(precio){
+    //     console.log(precio);
+    //     valor.innerText = `$ ${precio}.00`;
+    // }
+    // else if(precio == null || precio == undefined ){
+    //     valor.innerText = '';
+    // }
 });
 
 
@@ -118,7 +121,5 @@ const validacionCampos = () => {
     return validacion;
 }
 
-const getOpcion = (selector) => {
-    const opcion = selector.options[selector.selectedIndex].value;
-    return opcion;
-}
+//llamado de funciones
+setPlatillos(catalogo,sushi);
