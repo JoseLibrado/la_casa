@@ -38,17 +38,18 @@ export function validarCupon(id){
 }
 
 export const setPlatillos = ({sushis},platillo) => {
-    const opciones = [0,1,2];    
+     const valores = Object.values(sushis);
+    //  console.log(valores);
+    // const opciones = [0,1,2];    
     // console.log(sushis[opciones[1]]);
     
-    for(let item of opciones){
+    for(let i=0; i < valores.length ; i++){
         const opcion =  document.createElement('option');
-        opcion.setAttribute('value',`${item}`);
-        opcion.innerText = sushis[item].nombre;
+        opcion.setAttribute('value',`${i}`);
+        opcion.innerText = valores[i].nombre;
         platillo.appendChild(opcion);
     }
-}
- 
+} 
 
 export const getPlatillos = selector => {
     const opcion = selector.options[selector.selectedIndex].value;
