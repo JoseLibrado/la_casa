@@ -42,12 +42,9 @@ export const setPlatillos = ({sushis},platillo) => {
     // console.log(sushis[opciones[1]]);
     
     for(let item of opciones){
-        // console.log(opciones[i]);
         const opcion =  document.createElement('option');
         opcion.setAttribute('value',`${item}`);
-        // console.log(sushis[opciones[i]]);
         opcion.innerText = sushis[item].nombre;
-        // console.log(opcion);
         platillo.appendChild(opcion);
     }
 }
