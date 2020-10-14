@@ -41,30 +41,15 @@ export const setPlatillos = ({sushis},platillo) => {
     const opciones = [0,1,2];    
     // console.log(sushis[opciones[1]]);
     
-    for(let i= 0; i < opciones.length; i++){
+    for(let item of opciones){
         // console.log(opciones[i]);
-        const opcion =  document.createElement('opcion');
-        opcion.setAttribute('value',`${opciones[i]}`);
+        const opcion =  document.createElement('option');
+        opcion.setAttribute('value',`${item}`);
         // console.log(sushis[opciones[i]]);
-        opcion.innerText = sushis[opciones[i]].nombre;
+        opcion.innerText = sushis[item].nombre;
         // console.log(opcion);
         platillo.appendChild(opcion);
     }
-
-    // console.log();
-
-    // id.forEach(({element}) => {
-    //     console.log(element);
-    // });
-    // for(let i=0; i< sushis.length; i++){
-    
-        // const opcion = document.createElement('option');
-        // opcion.setAttribute('value',`${i}`);  
-        // opcion.innerText = `${sushis[i]}`;
-        // let item = sushi.append(opcion);
-        // lista.push(opcion.getAttribute('value'));
-    
-    // }
 }
  
 
