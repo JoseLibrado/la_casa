@@ -1,4 +1,4 @@
-import {setPlatillos,sushis,lista_registrados, imprimirCupones, crearRegistro, validarCupon, buscarPrecio, precios} from './metodos';
+import {setOrden,lista_registrados, imprimirCupones, crearRegistro, validarCupon, buscarPrecio, precios,getOpcion} from './metodos';
 import {catalogo} from './precios';
 
 import {Cupon} from '../classes/cupon';
@@ -9,7 +9,11 @@ import '../css/componentes.css' ; //consumiendo los estilos.
 const main = document.querySelector('.main');
 const promociones = document.querySelector('.menu-promociones');
 const ordenes = document.querySelector('.menu-orden');
+const selector = document.querySelectorAll('.campos');
 const sushi = document.querySelector('#principal');
+const topin = document.querySelector('#topin');
+const refrescos = document.querySelector('#refrescos');
+const te = document.querySelector('#te');
 const valor = document.querySelector('.precio');
 const mensage = document.querySelector('#mensaje');
 const registro_cupon = document.querySelector('.registro-cupones');
@@ -89,20 +93,6 @@ btn_registrar.addEventListener('click',() => {
     }
 
 });
-sushi.addEventListener('click', ()=> {
-    // setPlatillos(catalogo,sushi);
-    // let platillo = getOpcion(sushi);
-    // // console.log(platillo);
-    // const precio = buscarPrecio(platillo);
-
-    // if(precio){
-    //     console.log(precio);
-    //     valor.innerText = `$ ${precio}.00`;
-    // }
-    // else if(precio == null || precio == undefined ){
-    //     valor.innerText = '';
-    // }
-});
 
 
 // funciones ===========
@@ -121,5 +111,37 @@ const validacionCampos = () => {
     return validacion;
 }
 
+const setPrecio = (select) => {
+    select.forEach(elmt => {
+        elmt.addEventListener('click', ()=> {
+    
+            for(let item of select){
+                if(item){
+                    const result = getOpcion(item);
+                    console.log(elmt);
+                    console.log(result);
+                    continue;
+                }
+            }
+            // let platillo = getOpcion(select[0]);
+            // console.log(platillo);
+            // const precio = buscarPrecio(platillo);
+        
+            // if(precio){
+            //     console.log(precio);
+            //     valor.innerText = `$ ${precio}.00`;
+            // }
+            // else if(precio == null || precio == undefined ){
+            //     valor.innerText = '';
+            // }
+        });
+    });
+}
+
 //llamado de funciones
-setPlatillos(catalogo,sushi);
+setOrden(catalogo,'sushis',sushi);
+setOrden(catalogo,'guarnicion',topin);
+setOrden(catalogo,'refrescos',refrescos);
+setOrden(catalogo,'te',te);
+
+setPrecio(selector);

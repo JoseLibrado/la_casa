@@ -37,7 +37,7 @@ export const catalogo = {
         }
 
     },
-    bebidas:  {
+    refrescos:  {
         1: {
             nombre: 'Coca-Cola 600ml',
             precio: 17
@@ -45,16 +45,18 @@ export const catalogo = {
         2: {
             nombre: 'Pepsi 600ml',
             precio: 15
-        },
-        3: {
+        }        
+    },
+    te: {
+        1: {
             nombre: 'Te de Jazmin 600ml',
             precio: 18
         },
-        4: {
+        2: {
             nombre: 'Jamaica-Limon 600ml',
             precio: 18
         },
-        5: {
+        3: {
             nombre: 'Piña 600ml',
             precio: 15
         }

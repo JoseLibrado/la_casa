@@ -1,6 +1,6 @@
 
 
-export const sushis = ['Mexicano', 'Estilo Oriental', 'Sierreño'];
+// export const sushis = ['Mexicano', 'Estilo Oriental', 'Sierreño'];
 
 
 // objeto que contiene los precios de los platillos
@@ -37,21 +37,18 @@ export function validarCupon(id){
 
 }
 
-export const setPlatillos = ({sushis},platillo) => {
-     const valores = Object.values(sushis);
-    //  console.log(valores);
-    // const opciones = [0,1,2];    
-    // console.log(sushis[opciones[1]]);
+export const setOrden = (cat,elem,orden) => {
+    const objetos = Object.values(cat[elem]);
     
-    for(let i=0; i < valores.length ; i++){
+    for(let i=0 ; i < objetos.length; i++){
         const opcion =  document.createElement('option');
         opcion.setAttribute('value',`${i}`);
-        opcion.innerText = valores[i].nombre;
-        platillo.appendChild(opcion);
+        opcion.innerText = objetos[i].nombre;
+        orden.appendChild(opcion);
     }
 } 
 
-export const getPlatillos = selector => {
+export const getOpcion = selector => {
     const opcion = selector.options[selector.selectedIndex].value;
     return opcion;
 }
