@@ -10,8 +10,8 @@ const main = document.querySelector('.main');
 const promociones = document.querySelector('.menu-promociones');
 const ordenes = document.querySelector('.menu-orden');
 const selector = document.querySelectorAll('.campos');
-const sushi = document.querySelector('#principal');
-const topin = document.querySelector('#topin');
+const sushi = document.querySelector('#sushis');
+const topin = document.querySelector('#guarnicion');
 const refrescos = document.querySelector('#refrescos');
 const te = document.querySelector('#te');
 const valor = document.querySelector('.precio');
@@ -111,31 +111,28 @@ const validacionCampos = () => {
     return validacion;
 }
 
-const setPrecio = (select) => {
+const setPrecio = (select,cat) => {
+    let entero;
+    let unidad ;
+    let ob;
+
     select.forEach(elmt => {
-        elmt.addEventListener('click', ()=> {
-    
-            for(let item of select){
-                if(item){
-                    const result = getOpcion(item);
-                    console.log(elmt);
-                    console.log(result);
-                    continue;
+        elmt.addEventListener('click', (event) => {
+            entero = event.target;
+            unidad = entero.getAttribute('id');
+            if(cat[unidad]){
+                let indice;
+                indice = entero.options[entero.selectedIndex].value;
+                if(indice === ''){          
+                    valor.innerText = '';   
+                } else {
+                    ob = Object.values(cat[unidad][indice]);      
+                    ob = ob[1];                
+                    valor.innerText = `$${ob}.00`;
                 }
             }
-            // let platillo = getOpcion(select[0]);
-            // console.log(platillo);
-            // const precio = buscarPrecio(platillo);
-        
-            // if(precio){
-            //     console.log(precio);
-            //     valor.innerText = `$ ${precio}.00`;
-            // }
-            // else if(precio == null || precio == undefined ){
-            //     valor.innerText = '';
-            // }
-        });
-    });
+        });    
+    });    
 }
 
 //llamado de funciones
@@ -144,4 +141,4 @@ setOrden(catalogo,'guarnicion',topin);
 setOrden(catalogo,'refrescos',refrescos);
 setOrden(catalogo,'te',te);
 
-setPrecio(selector);
+setPrecio(selector,catalogo);
