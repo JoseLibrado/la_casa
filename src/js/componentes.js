@@ -1,4 +1,4 @@
-import {setOrden,lista_registrados, imprimirCupones, crearRegistro, validarCupon, buscarPrecio, precios,getOpcion} from './metodos';
+import {posicionArr,setOrden,lista_registrados, imprimirCupones, crearRegistro, validarCupon, buscarPrecio, precios,getOpcion} from './metodos';
 import {catalogo} from './precios';
 
 import {Cupon} from '../classes/cupon';
@@ -14,7 +14,7 @@ const sushi = document.querySelector('#sushis');
 const topin = document.querySelector('#guarnicion');
 const refrescos = document.querySelector('#refrescos');
 const te = document.querySelector('#te');
-const valor = document.querySelector('.precio');
+const valor = document.querySelectorAll('.precio');
 const mensage = document.querySelector('#mensaje');
 const registro_cupon = document.querySelector('.registro-cupones');
 const nombre = document.querySelector('#nombre');
@@ -115,24 +115,33 @@ const setPrecio = (select,cat) => {
     let entero;
     let unidad ;
     let ob;
-
+    const arr = posicionArr(select);
+    // console.log(posicionArr(select));
+    
     select.forEach(elmt => {
         elmt.addEventListener('click', (event) => {
+
+            // console.log(select);
+            
             entero = event.target;
+            const entero_id = entero.getAttribute('id');
+            let ind = arr.indexOf(entero_id);
+            
             unidad = entero.getAttribute('id');
             if(cat[unidad]){
                 let indice;
                 indice = entero.options[entero.selectedIndex].value;
                 if(indice === ''){          
-                    valor.innerText = '';   
+                    valor[ind].innerText = '';   
                 } else {
                     ob = Object.values(cat[unidad][indice]);      
                     ob = ob[1];                
-                    valor.innerText = `$${ob}.00`;
+                    valor[ind].innerText = `$${ob}.00`;
                 }
             }
         });    
-    });    
+    }); 
+    
 }
 
 //llamado de funciones
@@ -142,3 +151,4 @@ setOrden(catalogo,'refrescos',refrescos);
 setOrden(catalogo,'te',te);
 
 setPrecio(selector,catalogo);
+ 

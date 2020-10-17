@@ -23,40 +23,40 @@ export const catalogo = {
     }
     ,
     guarnicion: {
-        1: {
+        0: {
             nombre: 'Tampico',
             precio: 10
         },
-        2: {
+        1: {
             nombre: 'Gratinado de Chipotle',
             precio: 10
         },
-        3: {
+        2: {
             nombre: 'Tampico+Aguacate',
             precio: 15
         }
 
     },
     refrescos:  {
-        1: {
+        0: {
             nombre: 'Coca-Cola 600ml',
             precio: 17
         },
-        2: {
+        1: {
             nombre: 'Pepsi 600ml',
             precio: 15
         }        
     },
     te: {
-        1: {
+        0: {
             nombre: 'Te de Jazmin 600ml',
             precio: 18
         },
-        2: {
+        1: {
             nombre: 'Jamaica-Limon 600ml',
             precio: 18
         },
-        3: {
+        2: {
             nombre: 'Piña 600ml',
             precio: 15
         }

@@ -59,5 +59,16 @@ export function buscarPrecio(valor){
         return precio;
     }
 }
+export function posicionArr(arr){
+    
+    let array=[];
+    if(array.length <= 0){
+        for(let i=0; i < arr.length; i++){
+            let ind = arr[i].getAttribute('id');
+            array.push(ind);
+        }
+    }
 
+    return array;
+}
 
