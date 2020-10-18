@@ -119,7 +119,7 @@ const setPrecio = (select,cat) => {
     // console.log(posicionArr(select));
     
     select.forEach(elmt => {
-        elmt.addEventListener('click', (event) => {
+    elmt.addEventListener('click', (event) => {
 
             // console.log(select);
             
@@ -140,7 +140,8 @@ const setPrecio = (select,cat) => {
                 }
             }
         });    
-    }); 
+    });
+    console.log('====='); 
     
 }
 
