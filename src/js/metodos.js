@@ -72,3 +72,16 @@ export function posicionArr(arr){
     return array;
 }
 
+export function sumarPrecios(arrPrecios,total) {
+    let subtotal = 0;
+
+    for(let i=0; i < arrPrecios.length; i++){
+        if(arrPrecios[i].textContent){
+            subtotal += arrPrecios[i].textContent * 1;
+        }
+        
+    }
+    total.innerText = `Total $${subtotal}`;  
+
+    return subtotal;    
+}

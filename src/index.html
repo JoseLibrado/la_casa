@@ -72,11 +72,15 @@
                         <select class="campos" name="principal" id="sushis">
                             <option value="">Selecciona un Platillo</option>
                         </select>
-                        <p class="precio"></p>
+                        <div class="cont-precio">
+                            <p>$</p> <p class="precio"></p>
+                        </div>
                         <Select class="campos" id="guarnicion">
                             <option value="">Seleccionar guarnicion</option>
                         </Select>            
-                        <p class="precio"></p>            
+                        <div class="cont-precio">
+                            <p>$</p> <p class="precio"></p>
+                        </div>   
                     </div>
                     <div class="orden-secundaria">
                         <h2>Extras</h2>
@@ -127,16 +131,20 @@
                         <select class="campos" name="" id="refrescos">
                             <option value="">Selecciona Refresco</option>
                         </select>
-                        <p class="precio"></p>
+                        <div class="cont-precio">
+                            <p>$</p> <p class="precio"></p>
+                        </div>
                         <h3>Té / Aguas Sabores</h3>
                         <Select class="campos" id="te">
                             <option value="">Selecciona Bebida</option>
                         </Select>    
-                        <p class="precio"></p>                    
+                        <div class="cont-precio">
+                            <p>$</p> <p class="precio"></p>
+                        </div>          
                     </div>
 
                     <div class="pago">
-                        <p class="total">Total $</p>
+                        <p class="total"></p>
                         <button type="submit" class="btn send-order">Enviar Orden</button>            
                     </div>
         

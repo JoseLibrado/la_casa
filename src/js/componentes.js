@@ -1,4 +1,4 @@
-import {posicionArr,setOrden,lista_registrados, imprimirCupones, crearRegistro, validarCupon, buscarPrecio, precios,getOpcion} from './metodos';
+import {sumarPrecios,posicionArr,setOrden,lista_registrados, imprimirCupones, crearRegistro, validarCupon, buscarPrecio, precios,getOpcion} from './metodos';
 import {catalogo} from './precios';
 
 import {Cupon} from '../classes/cupon';
@@ -19,6 +19,7 @@ const mensage = document.querySelector('#mensaje');
 const registro_cupon = document.querySelector('.registro-cupones');
 const nombre = document.querySelector('#nombre');
 const cuponRegistrado = document.querySelector('#cupon');
+const total = document.querySelector('.total');
 
 const btn_registrar = document.querySelector('#enviar');
 const btn_cupon = document.querySelector('#cuponera');
@@ -136,7 +137,7 @@ const setPrecio = (select,cat) => {
                 } else {
                     ob = Object.values(cat[unidad][indice]);      
                     ob = ob[1];                
-                    valor[ind].innerText = `$${ob}.00`;
+                    valor[ind].innerText = `${ob}`;
                 }
             }
         });    
@@ -152,4 +153,4 @@ setOrden(catalogo,'refrescos',refrescos);
 setOrden(catalogo,'te',te);
 
 setPrecio(selector,catalogo);
- 
+
