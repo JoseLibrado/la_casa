@@ -142,7 +142,6 @@ const setPrecio = (select,cat) => {
             }
         });    
     });
-    console.log('====='); 
     
 }
 
