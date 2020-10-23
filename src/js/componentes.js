@@ -24,6 +24,7 @@ const total = document.querySelector('.total');
 const btn_registrar = document.querySelector('#enviar');
 const btn_cupon = document.querySelector('#cuponera');
 const btn_ordenes = document.querySelector('#orden');
+const btn_calcular = document.querySelector('.calcular');
 
 // const lista = [];
 // for(let i=0; i< sushis.length; i++){
@@ -95,6 +96,16 @@ btn_registrar.addEventListener('click',() => {
 
 });
 
+btn_calcular.addEventListener('click', () => {
+    let getValor;
+    let subTotal = 0 ;
+
+    for(let i = 0; i < valor.length; i++){
+        getValor = valor[i].textContent;
+        subTotal += getValor * 1;
+    }
+    total.innerText = `$ ${subTotal}`
+});
 
 // funciones ===========
 const validacionCampos = () => {
