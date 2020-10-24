@@ -28,12 +28,25 @@
             </div>
             <div class="menu">
                 <section class="menu-promociones b100">
+<<<<<<< HEAD
                     <div class="simulador-promocion p1">
                         <div class="logo-promocion">
                             <a href="#" id="btn_modal">
                                 <img src="./assets/sushi2.jpg" alt="" srcset="">
                             </a>
                             <p class="precio">$ 00.00</p>
+=======
+                    <div class="simulador-promocion">
+                        <h2>Promo 1</h2>      
+                        <div class="promocion-contenido">
+                            <ul>
+                                <li>nombre promocion</li>
+                                <li>bebida</li>
+                                <li>00 Extras</li>
+                                <li>1 Cupon canjeable en prox compra</li>
+                            </ul>                  
+                            <p class="precio-promocion">$ 00.00</p>
+>>>>>>> dev
                         </div>
                         <div class="contenido-promocion">
                             <h2>Promo 1</h2>    
@@ -51,12 +64,25 @@
                             <button class="btn">Comprar</button>                             
                         </div>
                     </div>
+<<<<<<< HEAD
                     <div class="simulador-promocion p1">
                         <div class="logo-promocion">
                             <a href="#" id="btn_modal">
                                 <img src="./assets/sushi2.jpg" alt="" srcset="">
                             </a>
                             <p class="precio">$ 00.00</p>
+=======
+                    <div class="simulador-promocion">
+                        <h2>Promo 2</h2>    
+                        <div class="promocion-contenido">
+                            <ul>
+                                <li>nombre promocion</li>
+                                <li>bebida</li>
+                                <li>00 Extras</li>
+                                <li>1 Cupon canjeable en prox compra</li>
+                            </ul>                  
+                            <p class="precio-promocion">$ 00.00</p>
+>>>>>>> dev
                         </div>
                         <div class="contenido-promocion">
                             <h2>Promo 1</h2>    
@@ -74,12 +100,25 @@
                             <button class="btn">Comprar</button>                             
                         </div>
                     </div>
+<<<<<<< HEAD
                     <div class="simulador-promocion p1">
                         <div class="logo-promocion">
                             <a href="#" id="btn_modal">
                                 <img src="./assets/sushi2.jpg" alt="" srcset="">
                             </a>
                             <p class="precio">$ 00.00</p>
+=======
+                    <div class="simulador-promocion">
+                        <h2>Promo 3</h2>  
+                        <div class="promocion-contenido">
+                            <ul>
+                                <li>nombre promocion</li>
+                                <li>bebida</li>
+                                <li>00 Extras</li>
+                                <li>1 Cupon canjeable en prox compra</li>
+                            </ul>                  
+                            <p class="precio-promocion">$ 00.00</p>
+>>>>>>> dev
                         </div>
                         <div class="contenido-promocion">
                             <h2>Promo 1</h2>    
@@ -103,12 +142,18 @@
                     <!-- <h1 class="titulo">Ordenar</h1> -->
                     <div class="orden-principal">
                         <h2>Platillo</h2>
-                        <select class="campos" name="principal" id="principal">
+                        <select class="campos" name="principal" id="sushis">
                             <option value="">Selecciona un Platillo</option>
                         </select>
-                        <Select class="campos">
+                        <div class="cont-precio">
+                            <p>$</p> <p class="precio"></p>
+                        </div>
+                        <Select class="campos" id="guarnicion">
                             <option value="">Seleccionar guarnicion</option>
-                        </Select>                        
+                        </Select>            
+                        <div class="cont-precio">
+                            <p>$</p> <p class="precio"></p>
+                        </div>   
                     </div>
                     <div class="orden-secundaria">
                         <h2>Extras</h2>
@@ -156,18 +201,25 @@
                     <div class="orden-bebidas">
                         <h2>Bebidas</h2>
                         <h3>Refrescos</h3>
-                        <select class="campos" name="" id="principal">
+                        <select class="campos" name="" id="refrescos">
                             <option value="">Selecciona Refresco</option>
                         </select>
+                        <div class="cont-precio">
+                            <p>$</p> <p class="precio"></p>
+                        </div>
                         <h3>Té / Aguas Sabores</h3>
-                        <Select class="campos">
+                        <Select class="campos" id="te">
                             <option value="">Selecciona Bebida</option>
-                        </Select>                        
+                        </Select>    
+                        <div class="cont-precio">
+                            <p>$</p> <p class="precio"></p>
+                        </div>          
                     </div>
 
                     <div class="pago">
-                        <p class="total">Total $</p>
-                        <button type="submit" class="btn send-order">Enviar Orden</button>            
+                        <button type="submit" class="btn calcular">Calcular total</button>            
+                        <p class="total"></p>
+                        
                     </div>
         
                 </section>

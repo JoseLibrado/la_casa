@@ -1,4 +1,6 @@
-import {sushis,lista_registrados, imprimirCupones, crearRegistro, validarCupon} from './catalogo';
+import {sumarPrecios,posicionArr,setOrden,lista_registrados, imprimirCupones, crearRegistro, validarCupon, buscarPrecio, precios,getOpcion} from './metodos';
+import {catalogo} from './precios';
+
 import {Cupon} from '../classes/cupon';
 import '../css/componentes.css' ; //consumiendo los estilos.
 
@@ -8,32 +10,62 @@ const body = document.querySelector('body');
 const main = document.querySelector('.main');
 const promociones = document.querySelector('.menu-promociones');
 const ordenes = document.querySelector('.menu-orden');
-const sushi = document.querySelector('#principal');
+const selector = document.querySelectorAll('.campos');
+const sushi = document.querySelector('#sushis');
+const topin = document.querySelector('#guarnicion');
+const refrescos = document.querySelector('#refrescos');
+const te = document.querySelector('#te');
+const valor = document.querySelectorAll('.precio');
 const mensage = document.querySelector('#mensaje');
 const registro_cupon = document.querySelector('.registro-cupones');
 const nombre = document.querySelector('#nombre');
 const cuponRegistrado = document.querySelector('#cupon');
+const total = document.querySelector('.total');
 
 const btn_registrar = document.querySelector('#enviar');
 const btn_cupon = document.querySelector('#cuponera');
 const btn_ordenes = document.querySelector('#orden');
+<<<<<<< HEAD
 const btn_modal = document.querySelectorAll('#btn_modal');
 
 const divModal = document.createElement('div');
 const img_modal = document.createElement('img');  
 
 
+=======
+const btn_calcular = document.querySelector('.calcular');
+
+// const lista = [];
+>>>>>>> dev
 // for(let i=0; i< sushis.length; i++){
     
 //     const opcion = document.createElement('option');
 //     opcion.setAttribute('value',`${i}`);  
 //     opcion.innerText = `${sushis[i]}`;
+<<<<<<< HEAD
 //     sushi.append(opcion);  
 // }
 
+=======
+//     let item = sushi.append(opcion);
+//     lista.push(opcion.getAttribute('value'));
+
+// }
+
+// pendiente hacer la logica para implementar la lista de preciosÑ
+// console.log(lista);
+// console.log(sushi.children[1].value);
+// console.log(sushi.nextElementSibling);
+
+// const precio = buscarPrecio(3);
+// console.log(precio);
+
+// const opcion = sushi.options[sushi.selectedIndex].value;
+// console.log(opcion);
+>>>>>>> dev
 
 btn_cupon.addEventListener('click', () =>{
-    
+    // prompt('Registrar cúpon');
     if( registro_cupon.classList.contains('hidden') ){
         registro_cupon.classList.remove('hidden');     
         btn_cupon.classList.add('selected');
@@ -84,6 +116,7 @@ btn_registrar.addEventListener('click',() => {
 
 });
 
+<<<<<<< HEAD
 
 divModal.addEventListener('click',e => {
 
@@ -95,6 +128,20 @@ divModal.addEventListener('click',e => {
 
 });
 
+=======
+btn_calcular.addEventListener('click', () => {
+    let getValor;
+    let subTotal = 0 ;
+
+    for(let i = 0; i < valor.length; i++){
+        getValor = valor[i].textContent;
+        subTotal += getValor * 1;
+    }
+    total.innerText = `$ ${subTotal}`
+});
+
+// funciones ===========
+>>>>>>> dev
 const validacionCampos = () => {
     let validacion = false;
     if(nombre.value == '' || cuponRegistrado.value == ''){
@@ -110,6 +157,7 @@ const validacionCampos = () => {
     return validacion;
 }
 
+<<<<<<< HEAD
 const add_modal = () => {
 
         btn_modal.forEach(elm => {
@@ -128,3 +176,46 @@ const add_modal = () => {
 }
 
 add_modal();
+=======
+const setPrecio = (select,cat) => {
+    let entero;
+    let unidad ;
+    let ob;
+    const arr = posicionArr(select);
+    // console.log(posicionArr(select));
+    
+    select.forEach(elmt => {
+    elmt.addEventListener('click', (event) => {
+
+            // console.log(select);
+            
+            entero = event.target;
+            const entero_id = entero.getAttribute('id');
+            let ind = arr.indexOf(entero_id);
+            
+            unidad = entero.getAttribute('id');
+            if(cat[unidad]){
+                let indice;
+                indice = entero.options[entero.selectedIndex].value;
+                if(indice === ''){          
+                    valor[ind].innerText = '';   
+                } else {
+                    ob = Object.values(cat[unidad][indice]);      
+                    ob = ob[1];                
+                    valor[ind].innerText = `${ob}`;
+                }
+            }
+        });    
+    });
+    
+}
+
+//llamado de funciones
+setOrden(catalogo,'sushis',sushi);
+setOrden(catalogo,'guarnicion',topin);
+setOrden(catalogo,'refrescos',refrescos);
+setOrden(catalogo,'te',te);
+
+setPrecio(selector,catalogo);
+
+>>>>>>> dev

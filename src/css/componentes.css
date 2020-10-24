@@ -155,6 +155,11 @@ li::before {
     /* width: 40%; */
     text-align: center;
 }
+.cont-precio {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .precio {    
     /* margin: 0 0 0 1rem; */
     font-size: 4rem;
