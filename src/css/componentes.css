@@ -1,6 +1,6 @@
 :root {
     --lineas: orange; /* rgba(201, 201, 201, 0.719); */
-    --letras: orange;
+    --letras: rgb(187, 187, 187);
     --fondo: rgba(247, 247, 247, 0.973);
 }
 
@@ -14,7 +14,7 @@ html {
     font-size: 62.5%; /*  Esto equivale 10px = 1rem */
 }
 body {
-    background-color: black;
+    background-color: white;
     /* background-color: var(--fondo); */
     color: var(--letras); 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
@@ -163,8 +163,8 @@ li::before {
     display: none;    
 }
 .selected {
-    border-bottom: 1px solid var(--letras);
-    color: white;
+    /* border-bottom: 1px solid var(--letras); */
+    color: black;
 }
 .alert {
     color: rgb(230, 90, 90);
@@ -177,9 +177,9 @@ li::before {
 }
 /* header */
 header {
-    background-color: transparent;
+    /* background-color: ; */
     box-shadow: 0 0 5px 0 rgb(39, 39, 39);
-    /* border-radius: 5px; */
+    border-radius: 10px;
     /* border: 1px solid var(--lineas); */
     transition: all .3s ease-out;
     
@@ -189,8 +189,12 @@ header {
     justify-content: space-around;
     padding: 2rem 1rem;
 }
+.navegacion a {    
+    color: orange;
+}
 .navegacion a:hover {
-    border-bottom: 1px solid var(--letras);
+    /* border-bottom: 1px solid var(--letras); */
+    color: black;
 }
 /* main  */
 
@@ -202,7 +206,7 @@ header {
     box-shadow: 0 0 5px 0 rgb(39, 39, 39);
     transition: all .3s ease;
     margin-bottom: 1rem;        
-    transition: all .3s ease-out;
+    transition: all .3s ease-out;   
 }
 .form-cupon{
     width: 70%;
@@ -238,10 +242,12 @@ main {
 }
 .menu-promociones {
     background-color: transparent;
-    box-shadow: 0 0 5px 0  rgb(39, 39, 39);
+    /* box-shadow: 0 0 5px 0  rgb(39, 39, 39); */
+    border: 1px solid rgb(39, 39, 39);
     /* border-radius: 5px;
     border: 1px solid var(--lineas);  */
-    transition: all .3s ease-out;
+    transition: all .3s ease-out;     
+    border-radius: 10px;
 }
 /* menu-orden */
 .menu-orden {    
@@ -251,7 +257,8 @@ main {
     /* padding: 0 1rem;
     border-radius: 5px; */
     /* border: 1px solid var(--lineas);     */
-    /* transition: all .3s ease-out; */
+    /* transition: all .3s ease-out; */     
+    border-radius: 10px;
 }
 .orden-principal {
     display: flex;
