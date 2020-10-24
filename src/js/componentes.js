@@ -6,7 +6,6 @@ import '../css/componentes.css' ; //consumiendo los estilos.
 
 
 // referencias 
-const body = document.querySelector('body');
 const main = document.querySelector('.main');
 const promociones = document.querySelector('.menu-promociones');
 const ordenes = document.querySelector('.menu-orden');
@@ -25,28 +24,14 @@ const total = document.querySelector('.total');
 const btn_registrar = document.querySelector('#enviar');
 const btn_cupon = document.querySelector('#cuponera');
 const btn_ordenes = document.querySelector('#orden');
-<<<<<<< HEAD
-const btn_modal = document.querySelectorAll('#btn_modal');
-
-const divModal = document.createElement('div');
-const img_modal = document.createElement('img');  
-
-
-=======
 const btn_calcular = document.querySelector('.calcular');
 
 // const lista = [];
->>>>>>> dev
 // for(let i=0; i< sushis.length; i++){
     
 //     const opcion = document.createElement('option');
 //     opcion.setAttribute('value',`${i}`);  
 //     opcion.innerText = `${sushis[i]}`;
-<<<<<<< HEAD
-//     sushi.append(opcion);  
-// }
-
-=======
 //     let item = sushi.append(opcion);
 //     lista.push(opcion.getAttribute('value'));
 
@@ -62,16 +47,13 @@ const btn_calcular = document.querySelector('.calcular');
 
 // const opcion = sushi.options[sushi.selectedIndex].value;
 // console.log(opcion);
->>>>>>> dev
 
 btn_cupon.addEventListener('click', () =>{
     // prompt('Registrar cúpon');
     if( registro_cupon.classList.contains('hidden') ){
         registro_cupon.classList.remove('hidden');     
-        btn_cupon.classList.add('selected');
     } else {
-        registro_cupon.classList.add('hidden');  
-        btn_cupon.classList.remove('selected');     
+        registro_cupon.classList.add('hidden');       
     }    
 });
 
@@ -80,13 +62,11 @@ btn_ordenes.addEventListener('click', () => {
     if( ordenes.classList.contains('hidden') ){
         ordenes.classList.remove('hidden');  
         promociones.classList.remove('b100');           
-        promociones.classList.add('b60');   
-        btn_ordenes.classList.add('selected'); 
+        promociones.classList.add('b60');    
     } else {
         ordenes.classList.add('hidden'); 
         promociones.classList.remove('b60');
-        promociones.classList.add('b100');     
-        btn_ordenes.classList.remove('selected');  
+        promociones.classList.add('b100');      
     }
 
 });
@@ -116,19 +96,6 @@ btn_registrar.addEventListener('click',() => {
 
 });
 
-<<<<<<< HEAD
-
-divModal.addEventListener('click',e => {
-
-    // console.log(e.target);
-    if(e.target === divModal){
-        divModal.removeChild(img_modal);
-        body.removeChild(divModal);
-    }
-
-});
-
-=======
 btn_calcular.addEventListener('click', () => {
     let getValor;
     let subTotal = 0 ;
@@ -141,7 +108,6 @@ btn_calcular.addEventListener('click', () => {
 });
 
 // funciones ===========
->>>>>>> dev
 const validacionCampos = () => {
     let validacion = false;
     if(nombre.value == '' || cuponRegistrado.value == ''){
@@ -157,26 +123,6 @@ const validacionCampos = () => {
     return validacion;
 }
 
-<<<<<<< HEAD
-const add_modal = () => {
-
-        btn_modal.forEach(elm => {
-            
-            elm.addEventListener('click', (e) => {
-
-                // console.log(e.target);
-                divModal.classList.add('modal');
-                body.appendChild(divModal);
-                img_modal.classList.add('img-modal');
-                img_modal.src = '../assets/sushi2.jpg';
-                divModal.appendChild(img_modal);
-        });
-        
-    });    
-}
-
-add_modal();
-=======
 const setPrecio = (select,cat) => {
     let entero;
     let unidad ;
@@ -218,4 +164,3 @@ setOrden(catalogo,'te',te);
 
 setPrecio(selector,catalogo);
 
->>>>>>> dev
