@@ -7,12 +7,17 @@ html {
 html {
     font-size: 62.5%; /*  Esto equivale 10px = 1rem */
 }
-body { color: black; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+body { 
+    margin: 0;
+    color: black; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2.2rem;
+    background-color: darkgray;
+}
 /* Gloables */
 .contenedor {
     width: 75%;
-    margin: 0 auto;    
-    font-size: 2.2rem;
+    margin: 0 auto;      
     transition: all .3s ease-out;
     
 }
@@ -20,6 +25,11 @@ a{
     text-decoration: none;
     color: black;
     margin: 0;    
+}
+img {
+    width: 100%;
+    box-shadow: 1px 1px 5px rgba(1, 1, 1, .5);
+    border-radius: .5rem;
 }
 p, h1,h2,h3 {
     margin: 0;
@@ -43,13 +53,13 @@ ul {
     height: 0%;
 }
 .b60{
-    flex-basis: calc(60% - .5rem);
+    flex-basis: calc(60% - 1rem);
 }
 .b40{
     flex-basis: calc(40% - .5rem);    
 }
 .b100 {
-    flex-basis: 100%;    
+    flex-basis: 70%;    
 }
 .btn {
     width: 80%;
@@ -58,6 +68,16 @@ ul {
     background-color: transparent;
     padding: 1rem 0;
     text-align: center;
+}
+.card {
+    border-radius: .5rem;
+    background-color: darkorange;
+    box-shadow: 1px 1px 5px rgba(1, 1, 1, .5);
+    padding: 2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 .nota {
     font-size: 1.6rem;
@@ -103,19 +123,21 @@ ul {
 }
 /* header */
 header {
-    border: 1px solid black;
-    transition: all .3s ease-out;
-    
+    background-color: rgba(247, 1, 1,.7);
+    width: 100%;
+    padding: 2rem 0;
 }
 .navegacion {
     display: flex;
     justify-content: space-around;
-    padding: 2rem 1rem;
 }
 /* main  */
 
 .registro-cupones {        
-    border: 1px solid black;
+    /* border: 1px solid black; */
+    background-color: olive;    
+    box-shadow: 1px 1px 5px rgba(1, 1, 1, .5);
+    border-radius: .5rem;
     transition: all .3s ease;
     margin-bottom: 1rem;        
     transition: all .3s ease-out;
@@ -146,17 +168,23 @@ main {
 }
 .menu {
     display: flex;
-    justify-content: space-between;    
+    justify-content: space-between; 
     text-align: center;
 }
 .menu-promociones {
- border: 1px solid black; 
- transition: all .3s ease-out;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid black;  */
+    transition: all .3s ease-out;
 }
 /* menu-orden */
 .menu-orden {    
+    background-color: brown;
+    border-radius: .5rem;
     padding: 0 1rem;
-    border: 1px solid black;    
+    /* border: 1px solid black;     */
     /* transition: all .3s ease-out; */
 }
 .orden-principal {
