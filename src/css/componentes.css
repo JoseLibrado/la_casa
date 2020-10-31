@@ -113,7 +113,7 @@ ul {
     display: none;    
 }
 .alert {
-    color: rgb(230, 90, 90);
+    color: yellow;
     font-size: 1.6rem;
 }
 .success {
@@ -123,9 +123,10 @@ ul {
 }
 /* header */
 header {
-    background-color: rgba(247, 1, 1,.7);
+    background-color: brown;
     width: 100%;
     padding: 2rem 0;
+    box-shadow: 1px 1px 5px rgba(1, 1, 1, .5);
 }
 .navegacion {
     display: flex;
@@ -181,7 +182,9 @@ main {
 }
 /* menu-orden */
 .menu-orden {    
-    background-color: brown;
+    background-color: rgba(247, 1, 1,.7);
+    box-shadow: 1px 1px 5px rgba(1, 1, 1, .5);
+    /* background-color: brown; */
     border-radius: .5rem;
     padding: 0 1rem;
     /* border: 1px solid black;     */
