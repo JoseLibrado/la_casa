@@ -107,6 +107,8 @@ btn_calcular.addEventListener('click', () => {
     total.innerText = `$ ${subTotal}`
 });
 
+
+
 // funciones ===========
 const validacionCampos = () => {
     let validacion = false;

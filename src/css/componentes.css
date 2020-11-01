@@ -13,12 +13,14 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 2.2rem;
     background-color: darkgray;
+    position: relative;
 }
 /* Gloables */
 .contenedor {
     width: 75%;
     margin: 0 auto;      
     transition: all .3s ease-out;
+    
     
 }
 a{
@@ -110,7 +112,7 @@ ul {
     font-size: 4rem;
 }
 .hidden {
-    display: none;    
+    display: none;
 }
 .alert {
     color: yellow;
@@ -142,6 +144,11 @@ header {
     transition: all .3s ease;
     margin-bottom: 1rem;        
     transition: all .3s ease-out;
+    
+    position: absolute;
+    content:"";
+    top: 10rem;
+    left: auto;
 }
 .form-cupon{
     width: 70%;
