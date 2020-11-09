@@ -57,6 +57,15 @@ btn_cupon.addEventListener('click', () =>{
     }    
 });
 
+registro_cupon.addEventListener('click', event => {
+    const clase = event.target;
+    
+    if(clase.getAttribute('class') == 'registro-cupones'){
+        registro_cupon.classList.add('hidden');   
+    }
+
+});
+
 btn_ordenes.addEventListener('click', () => {
 
     if( ordenes.classList.contains('hidden') ){
